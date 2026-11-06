@@ -35,7 +35,7 @@ if (IsEligibleForBonus(bonus))
 }
 else
 {
-    double result =  calculateScholarship (2000, 0);
+    double result =  calculateScholarship (2000,0) ;
     Console.WriteLine($"без  надбавки {result} ");
 }
 
@@ -53,3 +53,17 @@ double calculateScholarship(double baseAmount, double bonusPercent)
 {
     return baseAmount + baseAmount * bonusPercent / 100;
 }
+//4
+double CalculateAverageGrade(int[] grades)
+{
+    int sum = 0;
+    foreach (int grade in grades)
+    {
+        sum += grade;
+
+    }
+    return (double)sum / grades.Length;
+}
+int[] grades = { 4, 5, 3, 5, 4 };
+double average = CalculateAverageGrade(grades);
+Console.WriteLine(average);
